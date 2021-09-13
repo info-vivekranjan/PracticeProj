@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function GithubUsersData() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("info-vivekranjan");
   const [data, setData] = useState({});
 
   const handleChange = (e) => {
@@ -35,7 +35,7 @@ function GithubUsersData() {
         <form
           onSubmit={handleSubmit}
           style={{
-            width: "30%",
+            width: "60%",
             padding: "10px",
           }}
         >
@@ -43,8 +43,27 @@ function GithubUsersData() {
             placeholder="Github Users Name..."
             value={query}
             onChange={handleChange}
+            style={{
+              padding: "7px 10px",
+              fontSize: "18px",
+              border: "2px solid black",
+              borderRadius: "4px",
+            }}
           />
-          <input type="submit" value="Search" />
+          <input
+            type="submit"
+            value="Search"
+            style={{
+              padding: "7px 10px",
+              fontSize: "18px",
+              border: "none",
+              borderRadius: "4px",
+              backgroundColor: "black",
+              color: "white",
+              marginLeft: "10px",
+              cursor: "pointer",
+            }}
+          />
         </form>
 
         <div>
