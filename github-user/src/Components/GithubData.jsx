@@ -97,6 +97,9 @@ function GithubUsersData() {
                 Go to users website {"-->"}
               </a>
             </h3>
+
+            <h3>{`Total Repos  :  ${data.public_repos}`}</h3>
+            <h4>Twitter : {data.twitter_username}</h4>
             <h5>{data.bio}</h5>
           </div>
         </div>

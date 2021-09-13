@@ -124,7 +124,7 @@ function GithubUsers() {
           </div>
         </div>
 
-        <div style={{ width: "50%" }}>
+        <div style={{ width: "50%", marginLeft: "20px" }}>
           <GithubUsersData />
         </div>
       </div>
