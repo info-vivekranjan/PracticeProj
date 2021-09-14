@@ -7,4 +7,4 @@
 
   - Landing apge
 
-  ![Landing Page]("../Screenshots/githubUser.png)
+  ![Landing Page]("./Screenshots/githubUser.png")
