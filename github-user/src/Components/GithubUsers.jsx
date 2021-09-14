@@ -32,17 +32,41 @@ function GithubUsers() {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Github Users</h1>
+      <div
+        style={{
+          position: "fixed",
+          width: "100%",
+          fontSize: "40px",
+          fontWeight: "600",
+          backgroundColor: "#161B22",
+          color: "white",
+          height: "60px",
+          zIndex: "1",
+          margin: 0,
+          padding: 0,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        Github Users
+      </div>
 
-      <hr />
-
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          position: "relative",
+          paddingTop: "60px",
+        }}
+      >
         <div
           style={{
             width: "50%",
             display: "grid",
             justifyContent: "center",
-            borderRight: "2px solid gray",
+            borderRight: "2px solid #161B22",
+            marginLeft: "10%",
           }}
         >
           <h3>Search by name or id:</h3>
@@ -80,10 +104,10 @@ function GithubUsers() {
               }}
             />
           </form>
-          <h6
+          <h5
             style={{
               border: "2px solid black",
-              width: "30%",
+              width: "50%",
               marginTop: "20px",
               padding: "10px",
               backgroundColor: "tomato",
@@ -91,8 +115,8 @@ function GithubUsers() {
             }}
           >
             Note: After searching a github user you can get all the details of
-            that user on the right side
-          </h6>
+            that user on the right side by copying id from left side
+          </h5>
           <div>
             {data.map((item) => {
               return (
@@ -100,10 +124,13 @@ function GithubUsers() {
                   <div
                     style={{
                       border: "2px solid black",
+                      borderRadius: "5px",
                       width: "50%",
                       marginTop: "20px",
                       padding: "10px",
                       textAlign: "center",
+                      backgroundColor: "#161B22",
+                      color: "white",
                     }}
                   >
                     <div>
@@ -124,7 +151,7 @@ function GithubUsers() {
           </div>
         </div>
 
-        <div style={{ width: "50%", marginLeft: "20px" }}>
+        <div style={{ width: "50%", marginLeft: "7%" }}>
           <GithubUsersData />
         </div>
       </div>

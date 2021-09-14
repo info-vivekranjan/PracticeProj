@@ -70,10 +70,13 @@ function GithubUsersData() {
           <div
             style={{
               border: "2px solid black",
+              borderRadius: "5px",
               width: "50%",
               marginTop: "20px",
               padding: "10px",
               textAlign: "center",
+              backgroundColor: "#161B22",
+              color: "white",
             }}
           >
             <div>
@@ -92,7 +95,7 @@ function GithubUsersData() {
               <a
                 href={data.blog}
                 target="_blank"
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", color: "cyan" }}
               >
                 Go to users website {"-->"}
               </a>
