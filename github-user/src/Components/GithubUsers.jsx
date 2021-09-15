@@ -137,7 +137,7 @@ function GithubUsers() {
                       <img
                         src={item.avatar_url}
                         style={{
-                          width: "50%",
+                          width: "35%",
                           border: "3px solid black",
                           borderRadius: "50%",
                         }}
