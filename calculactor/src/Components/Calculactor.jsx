@@ -16,12 +16,22 @@ function Calculactor() {
     setQuery(eval(query));
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key == "Enter") {
+      setQuery(eval(query));
+    }
+  };
+
   const handleClear = () => {
     setQuery("");
   };
 
   const calculatePer = () => {
     setQuery(eval(query / 100));
+  };
+
+  const eraseOne = () => {
+    setQuery(query.slice(0, -1));
   };
 
   return (
@@ -31,14 +41,21 @@ function Calculactor() {
       <section>
         <div className={styles.calculactorCont}>
           <div>
-            <input onChange={handleChange} value={query} placeholder="00" />
+            <input
+              onChange={handleChange}
+              value={query}
+              placeholder="00"
+              onKeyPress={handleKeyPress}
+            />
           </div>
 
           <div>
             <button onClick={handleClear} style={{ color: "#EF7624" }}>
               C
             </button>
-            <button style={{ color: "#EF7624" }}>E</button>
+            <button style={{ color: "#EF7624" }} onClick={eraseOne}>
+              E
+            </button>
             <button onClick={calculatePer} style={{ color: "#EF7624" }}>
               %
             </button>
