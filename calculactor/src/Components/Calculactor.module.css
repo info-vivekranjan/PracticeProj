@@ -1,0 +1,19 @@
+.calculactorCont {
+  border: 1px solid black;
+  width: 30%;
+  margin: auto;
+  padding: 20px 10px;
+}
+
+.calculactorCont div > button {
+  font-size: 18px;
+  padding: 1.5vw 0;
+  width: 6vw;
+  margin: 0.5vw;
+}
+
+.calculactorCont div > input {
+  width: 26.6vw;
+  padding: 10px 0;
+  font-size: 18px;
+}
