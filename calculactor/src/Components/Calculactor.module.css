@@ -3,17 +3,29 @@
   width: 30%;
   margin: auto;
   padding: 20px 10px;
+  background-color: black;
 }
 
 .calculactorCont div > button {
-  font-size: 18px;
+  font-size: 20px;
   padding: 1.5vw 0;
   width: 6vw;
   margin: 0.5vw;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
 }
 
 .calculactorCont div > input {
-  width: 26.6vw;
-  padding: 10px 0;
-  font-size: 18px;
+  width: 25.5vw;
+  padding: 15px 10px;
+  font-size: 25px;
+  border: 2px solid black;
+  outline: none;
+  text-align: right;
+}
+
+.equalBtn {
+  background-color: #ef7624;
+  color: white;
 }
