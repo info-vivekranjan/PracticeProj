@@ -29,3 +29,24 @@
   background-color: #ef7624;
   color: white;
 }
+
+/* Extra small devices (phones, 550px and down) */
+@media only screen and (max-width: 550px) {
+  .calculactorCont {
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
+  }
+
+  .calculactorCont div > button {
+    font-size: 25px;
+    padding: 3vw 0;
+    width: 15vw;
+  }
+
+  .calculactorCont div > input {
+    width: 59vw;
+    padding: 15px 10px;
+    font-size: 25px;
+  }
+}
