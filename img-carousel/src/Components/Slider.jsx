@@ -41,8 +41,9 @@ function Slider() {
       })}
 
       <div className="sliderBtnCont">
-        <button onClick={prevBtn}>Prev</button>
-        <button onClick={nextBtn}>Next</button>
+        <i onClick={prevBtn} className="ri-arrow-left-s-line"></i>
+
+        <i onClick={nextBtn} className="ri-arrow-right-s-line"></i>
       </div>
 
       <div className="dotCont">
