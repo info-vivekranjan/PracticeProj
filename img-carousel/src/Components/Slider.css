@@ -1,6 +1,6 @@
 .sliderCont {
   width: 100vw;
-  height: 500px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -22,8 +22,44 @@
   opacity: 1;
 }
 
-.sliderBtnCont {
+.sliderBtnCont button:nth-child(1),
+.sliderBtnCont button:nth-child(2) {
+  padding: 5px;
+  height: 100px;
+  width: 125px;
+  font-size: 25px;
   position: absolute;
-  bottom: 0;
-  right: 50%;
+  bottom: 50%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.sliderBtnCont button:nth-child(1) {
+  left: 0;
+}
+
+.sliderBtnCont button:nth-child(2) {
+  right: 0;
+}
+
+.dotCont {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  right: 45%;
+}
+
+.dots {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+  margin: 7px;
+  cursor: pointer;
+}
+.dots.activedots {
+  background-color: rgb(99, 99, 99);
 }

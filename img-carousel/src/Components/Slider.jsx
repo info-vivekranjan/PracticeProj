@@ -21,10 +21,12 @@ function Slider() {
     }
   };
 
+  const moveToDot = (index) => {
+    setSliderIndex(index);
+  };
+
   return (
     <div className="sliderCont">
-      <h1>Image Slider</h1>
-
       {data.map((item, index) => {
         return (
           <div
@@ -41,6 +43,17 @@ function Slider() {
       <div className="sliderBtnCont">
         <button onClick={prevBtn}>Prev</button>
         <button onClick={nextBtn}>Next</button>
+      </div>
+
+      <div className="dotCont">
+        {Array.from({ length: 5 }).map((item, index) => {
+          return (
+            <div
+              className={sliderIndex == index + 1 ? "dots activedots" : "dots"}
+              onClick={() => moveToDot(index + 1)}
+            ></div>
+          );
+        })}
       </div>
     </div>
   );
