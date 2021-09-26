@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { data } from "./DataSlider";
 import "./Slider.css";
 
@@ -25,8 +25,24 @@ function Slider() {
     setSliderIndex(index);
   };
 
+  useEffect(() => {
+    let id = setInterval(() => {
+      if (sliderIndex === data.length) {
+        setSliderIndex(1);
+      } else {
+        setSliderIndex(sliderIndex + 1);
+      }
+    }, 2000);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, [sliderIndex]);
+
+  // console.log(sliderIndex);
+
   return (
-    <div className="sliderCont">
+    <section className="sliderCont">
       {data.map((item, index) => {
         return (
           <div
@@ -35,7 +51,7 @@ function Slider() {
               sliderIndex === index + 1 ? "slideImg animatedSlide" : "slideImg"
             }
           >
-            <img src={item.img} alt={item.title} />
+            <img src={item.img} alt={item.title} />;
           </div>
         );
       })}
@@ -46,7 +62,7 @@ function Slider() {
         <i onClick={nextBtn} className="ri-arrow-right-s-line"></i>
       </div>
 
-      <div className="dotCont">
+      <section className="dotCont">
         {Array.from({ length: 5 }).map((item, index) => {
           return (
             <div
@@ -55,8 +71,8 @@ function Slider() {
             ></div>
           );
         })}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 
